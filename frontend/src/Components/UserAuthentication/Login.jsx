@@ -13,7 +13,7 @@ const Login = () => {
           const email = event.target.email.value;
           const password = event.target.password.value;
     try {
-      const response = await axios.post('http://127.0.0.1:8000/login/', {
+      const response = await axios.post('http://54.70.87.81/login/', {
         email,
         password
       });

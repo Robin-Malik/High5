@@ -56,7 +56,7 @@ const AddUserPopup = () => {
       e.preventDefault();
       
       try {
-        const response =  await axios.post(`http://127.0.0.1:8000/register/`, formData, {
+        const response =  await axios.post(`http://54.70.87.81/register/`, formData, {
           headers: {
           Authorization: `Bearer ${token}`
           }})

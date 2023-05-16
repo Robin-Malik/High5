@@ -37,7 +37,7 @@ const EditUserPopup = ({user, onClose, toast}) => {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const response =  await axios.put(`http://127.0.0.1:8000/update/${user.id}/`, formData, {
+      const response =  await axios.put(`http://54.70.87.81/update/${user.id}/`, formData, {
         headers: {
         Authorization: `Bearer ${token}`
         }})

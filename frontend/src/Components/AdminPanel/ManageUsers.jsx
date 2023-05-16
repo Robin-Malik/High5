@@ -7,7 +7,7 @@ import BulkUploadPopup from './BulkUploadPopup';
 import { CSVLink } from 'react-csv';
 import {GiCrown} from 'react-icons/gi';
 
-const API = 'http://127.0.0.1:8000/account/user/'
+const API = 'http://54.70.87.81/account/user/'
 
 const ManageUsers = () => {
 
