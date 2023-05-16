@@ -1,0 +1,204 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 16% 0 0;
+  position: absolute;
+    right: 43px;
+    
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 6px;
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px 2px 8px 0px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: white;
+  border-bottom: 1px solid grey;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: rgb(74, 143, 222);
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+
+.modal-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(189, 189, 189, 0.9);
+}
+
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.model-btn {
+  padding: 0.4rem 1.2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transform: scale(0.9);
+  text-decoration: none;
+}
+
+.search-bar {
+  width: 30rem;
+  position: absolute;
+  left: 30px;
+  top: 10px;
+}
+
+.edit-btn {
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #dfe4ea;
+  color: #0b0a0a;
+  cursor: pointer;
+  transform: scale(0.9);
+  text-decoration: none;
+}
+
+.icon-btn {
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 0.2rem 0.4rem;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+
+
+.left-sidebar {
+  position: fixed; 
+  width: 240px;
+  background-color:rgb(74, 143, 222);
+  border-radius: 10px;
+  height: 90%;
+  margin-top: 20px;
+}
+
+.left-sidebar ul {
+  list-style: none; 
+  position: relative;
+  left: -20px;
+  width: 200px;
+}
+
+.left-sidebar li {
+  padding: 16px;
+  margin-left: 16px;
+}
+
+.left-sidebar li:last-child {
+  border-bottom: none;
+}
+
+.left-sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.left-sidebar a:hover {
+  background-color: grey;
+}
+
+.side-links {
+  padding: 0px 10px 10px 40px;
+  margin: 10px 10px 10px 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.side-links > a {
+  padding: 10px;
+} 
+
+.users-menu {
+  
+  background-color: grey;
+}
+
+.users-menu li {
+ margin-left: 0px;
+}
