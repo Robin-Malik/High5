@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 import Table from './Table';
 import { CSVLink } from 'react-csv';
 
-const API = 'http://54.70.87.81/account/user/'
+const API = 'https://18.236.91.253/account/user/'
 
 const Earnings = () => {
 

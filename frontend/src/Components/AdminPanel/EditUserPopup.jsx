@@ -37,7 +37,7 @@ const EditUserPopup = ({user, onClose, toast}) => {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const response =  await axios.put(`http://54.70.87.81/update/${user.id}/`, formData, {
+      const response =  await axios.put(`https://18.236.91.253/update/${user.id}/`, formData, {
         headers: {
         Authorization: `Bearer ${token}`
         }})
@@ -63,39 +63,58 @@ const EditUserPopup = ({user, onClose, toast}) => {
         <h3>Edit User</h3>
         <form onSubmit={submitHandler}>
 
-          <label>Email:</label>
-          <input type="text" name='email'  value={formData.email}  disabled />
+        <div className="flex items-center mb-4">
+          <label className="inline-block w-24 mr-4 mb-6">Email:</label>
+          <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="text" name='email'  value={formData.email}  disabled />
+        </div>
 
-          <label>First Name:</label>
-          <input type="text" name='firstName' value={formData.firstName}  disabled/>
+        <div className="flex items-center mb-4">
+          <label className="inline-block w-24 mr-4 mb-6">First Name:</label>
+          <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="text" name='firstName' value={formData.firstName}  disabled/>
+        </div>
 
-          <label>Last Name:</label>
-          <input type="text" name='lastName' value={formData.lastName}  disabled/>
+        <div className="flex items-center mb-4">
+          <label className="inline-block w-24 mr-4 mb-6">Last Name:</label>
+          <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="text" name='lastName' value={formData.lastName}  disabled/>
+        </div>
 
-          <label>Role:</label>
-          <input type="text" name='role' value={formData.role} onChange={handleChange}/>
 
-          <label>Country:</label>
-          <input type="text" name='country' value={formData.country} onChange={handleChange}/>
+        <div className="flex items-center mb-4">
+          <label className="inline-block w-24 mr-4 mb-6">Role:</label>
+          <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="text" name='role' value={formData.role} onChange={handleChange}/>
+        </div>
 
-          <label htmlFor="department">Department</label>
-          <input type="text" name="department"  value={formData.department} onChange={handleChange} required />
-    
-          <label htmlFor="location">Location</label>
-          <input type="text" name="location" value={formData.location} onChange={handleChange} required />
-    
-          <label htmlFor="userMode">User Mode</label>
-          <select  name="userMode" value={formData.userMode} onChange={handleChange}>
+        <div className="flex items-center mb-4">
+          <label className="inline-block w-24 mr-4 mb-6">Country:</label>
+          <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="text" name='country' value={formData.country} onChange={handleChange}/>
+        </div>
+
+        <div className="flex items-center mb-4">
+          <label className="inline-block w-24 mr-4 mb-6" htmlFor="department">Department</label>
+          <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="text" name="department"  value={formData.department} onChange={handleChange} required />
+        </div>
+
+        <div className="flex items-center mb-4">
+          <label className="inline-block w-24 mr-4 mb-6" htmlFor="location">Location</label>
+          <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="text" name="location" value={formData.location} onChange={handleChange} required />
+        </div>
+
+        <div className="flex items-center mb-4">
+          <label className="inline-block w-24 mr-4 mb-6"  htmlFor="userMode">User Mode</label>
+          <select class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4"  name="userMode" value={formData.userMode} onChange={handleChange}>
             <option value="normal">normal</option>
             <option value="benefactor">benefactor</option>
             <option value="receiver">receiver</option>
             <option value="observer">observer</option>
           </select>
+        </div>
 
-          <label>Allowance Boost:</label>
-          <input type="number" name='allowanceBoost' value={formData.allowanceBoost} onChange={handleChange}/>
-          
-          <button type="submit">Save</button>
+        <div className="flex items-center mb-4">
+          <label className="inline-block w-24 mr-4 mb-6">Allowance Boost:</label>
+          <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="number" name='allowanceBoost' value={formData.allowanceBoost} onChange={handleChange}/>
+        </div>
+        
+          <button class="bg-blue-500 text-white border-none py-2 px-4 rounded-md text-base cursor-pointer" type="submit">Save</button>
         </form>
       </div>
    

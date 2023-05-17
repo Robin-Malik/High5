@@ -55,7 +55,7 @@ const BulkUploadPopup = () => {
 
   return (
     <div>
-      <button className="model-btn" onClick={() => setShowModal(true)}>
+      <button class="px-3 py-1.5 text-lg rounded-md bg-blue-500 text-white cursor-pointer transform scale-90 no-underline" onClick={() => setShowModal(true)}>
         Bulk Upload
       </button>
       {showModal && mainModal}    

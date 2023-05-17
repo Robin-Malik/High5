@@ -5,6 +5,8 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 from django.views.generic import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
 
@@ -16,7 +18,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('', TemplateView.as_view(template_name='index.html')),
     path('api/v1/', include('notifications.urls'))
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_title = "High5 Admin"
 admin.site.site_header = "High5 Cloud Admin"

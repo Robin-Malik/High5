@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ShowModal from "./ShowModal";
-import './Modal.css';
+// import './Modal.css';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { ToastContainer, toast } from 'react-toastify';
@@ -56,7 +56,7 @@ const AddUserPopup = () => {
       e.preventDefault();
       
       try {
-        const response =  await axios.post(`http://54.70.87.81/register/`, formData, {
+        const response =  await axios.post(`http://127.0.0.1:8000register/`, formData, {
           headers: {
           Authorization: `Bearer ${token}`
           }})
@@ -88,31 +88,42 @@ const AddUserPopup = () => {
   const mainModal = (
     <ShowModal closeModal={closeModal} >
 
-      <h3>Add User</h3>  
+      <h3 class="text-center">
+        Add User
+        <span class="block w-30rem h-2 my-2 mx-auto bg-black"></span>
+      </h3>  
 
-      <div className="form-container">
+      <div class="max-w-2xl h-600 mx-auto overflow-auto top-2vh scrollbar-none">
       <form onSubmit={handleSubmit}>
 
-      <label htmlFor="firstName">First Name</label>
-      <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange}  required />
+      <div className="flex items-center mb-4">
+      <label  className="inline-block w-24 mr-4 mb-6" htmlFor="firstName">First Name</label>
+      <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange}  required />
+      </div>
 
-      <label htmlFor="lastName">Last Name</label>
-      <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange}  required />
+      <div className="flex items-center mb-4">
+      <label class="inline-block w-24 mr-4 mb-6" htmlFor="lastName">Last Name</label>
+      <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange}  required />
+      </div>
 
-      <label htmlFor="username">Username</label>
-      <input type="text" id="username" name="username" value={formData.username} onChange={handleChange}  required />
+      <div className="flex items-center mb-4">
+      <label class="inline-block w-24 mr-4 mb-6" htmlFor="username">Username</label>
+      <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="text" id="username" name="username" value={formData.username} onChange={handleChange}  required />
+      </div>
 
+      <div className="flex items-center mb-4">
+      <label class="inline-block w-24 mr-4 mb-6" htmlFor="email">Email</label>
+      <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+      </div>
 
-      <label htmlFor="email">Email</label>
-      <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
-
-      <label htmlFor="password">Password</label>
-      <input type="text" id="password" name="password" value={formData.password} onChange={handleChange}  required />
-
+      <div className="flex items-center mb-4">
+      <label class="inline-block w-24 mr-4 mb-6" htmlFor="password">Password</label>
+      <input class="inline-block w-full p-1 rounded-md border border-gray-300 text-base box-border mb-4" type="text" id="password" name="password" value={formData.password} onChange={handleChange}  required />
+      </div>
       
-      <div className="center">
-      <button className="cancel-button" onClick={closeModal}>Cancel</button>
-      <button type="submit">Save</button>
+      <div  class="flex justify-center items-center flex-wrap gap-4 mt-5">
+      <button class="bg-blue-500 text-white border-none py-2 px-4 rounded-md text-base cursor-pointer" className="cancel-button" onClick={closeModal}>Cancel</button>
+      <button class="bg-blue-500 text-white border-none py-2 px-4 rounded-md text-base cursor-pointer" type="submit">Save</button>
       </div>
 
     </form>
@@ -123,7 +134,7 @@ const AddUserPopup = () => {
 
   return (
     <div>
-      <button className="model-btn" onClick={() => setShowModal(true)}>
+      <button class="px-3 py-1.5 text-lg rounded-md bg-blue-500 text-white cursor-pointer transform scale-90 no-underline" onClick={() => setShowModal(true)}>
         Add User
       </button>
       {showModal && mainModal}    

@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-o7e5)^&)wv#-$9^wn(rklekag=i7s0@!92q72s#2priyc=f7ml
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['54.70.87.81']
+ALLOWED_HOSTS = ['18.236.91.253']
 
 
 # Application definition
@@ -41,14 +41,14 @@ REST_FRAMEWORK = {
 
 # Django project settings.py
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000"
+    "http://127.0.0.1:3000"
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTP_ONLY = True
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000"
+    "http://127.0.0.1:5174"
 ]
 CORS_EXPOSE_HEADERS = ["Content-Type", "X-CSRFToken"]
 SESSION_COOKIE_SECURE = True
@@ -118,7 +118,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
-  'http://localhost:3000',
+  'http://127.0.0.1:5174',
   'http://example.com'
 )
 
@@ -200,8 +200,10 @@ STATICFILES_DIRS = [BASE_DIR/'frontend/build/static']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = BASE_DIR/'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR/'media'
 
 
 EMAIL_USE_TLS = True
