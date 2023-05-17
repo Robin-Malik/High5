@@ -24,6 +24,7 @@ const DeleteUserPopup = ({userId, onClose, toast}) => {
       
             if (response.status === 200) {
               toast.success("User Deleted Successfully!")
+              console.log(userId)
               setTimeout(() => {
                   window.location.reload();
               }, 1000)
