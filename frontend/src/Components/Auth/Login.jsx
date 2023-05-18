@@ -13,7 +13,7 @@ const Login = () => {
           const email = event.target.email.value;
           const password = event.target.password.value;
     try {
-      const response = await axios.post('https://18.236.91.253/login/', {
+      const response = await axios.post('http://18.236.91.253/login/', {
         email,
         password
       });

@@ -7,7 +7,7 @@ const ForgotPassword = () => {
 
     const handleForgotPassword = async (email) => {
         try {
-          const response = await axios.post('https://18.236.91.253/request/password/', {
+          const response = await axios.post('http://18.236.91.253/request/password/', {
             email
           });
     

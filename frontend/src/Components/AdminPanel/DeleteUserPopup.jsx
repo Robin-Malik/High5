@@ -17,7 +17,7 @@ const DeleteUserPopup = ({userId, onClose, toast}) => {
     const deleteUserHandler = async (e) => {
         e.preventDefault();
         try {
-            const response =  await axios.delete(`https://18.236.91.253/delete/${userId}/`, {
+            const response =  await axios.delete(`http://18.236.91.253/delete/${userId}/`, {
               headers: {
               Authorization: `Bearer ${token}`
               }})

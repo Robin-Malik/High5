@@ -11,7 +11,7 @@ const ResetPassword = () => {
 
     const handleSubmit = async (password, token, uidb) => {
         try {
-          const response = await axios.patch('https://18.236.91.253/passwordreset/complete', {
+          const response = await axios.patch('http://18.236.91.253/passwordreset/complete', {
             password, token, uidb64
           });
     

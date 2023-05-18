@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-o7e5)^&)wv#-$9^wn(rklekag=i7s0@!92q72s#2priyc=f7ml
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.236.91.253']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -41,14 +41,14 @@ REST_FRAMEWORK = {
 
 # Django project settings.py
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:3000"
+    "http://127.0.0.1:5173"
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTP_ONLY = True
 CSRF_TRUSTED_ORIGINS = [
-    "http://127.0.0.1:5174"
+    "http://127.0.0.1:5173"
 ]
 CORS_EXPOSE_HEADERS = ["Content-Type", "X-CSRFToken"]
 SESSION_COOKIE_SECURE = True
@@ -118,7 +118,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
-  'http://127.0.0.1:5174',
+  'http://127.0.0.1:5173',
   'http://example.com'
 )
 
@@ -127,7 +127,7 @@ ROOT_URLCONF = 'logindashboard.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':  [BASE_DIR/'frontend/build'],
+        'DIRS':  [BASE_DIR/'frontend/dist'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -189,8 +189,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR/'frontend/build/static']
+# STATIC_URL = 'static/'
+# STATICFILES_DIRS = [BASE_DIR/'frontend/build/static']
+
+STATIC_URL = '/assets/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'frontend', 'dist', 'assets'),]
 
 
 #STATICFILES_DIRS = [BASE_DIR/'frontend/build/static']
