@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path,re_path, include
 from django.contrib import admin
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -17,7 +17,9 @@ urlpatterns = [
     path('', include('accounts.urls')),
     path('', include('home.urls')),
     path('', TemplateView.as_view(template_name='index.html')),
-    path('api/v1/', include('notifications.urls'))
+    path('api/v1/', include('notifications.urls')),
+    path('',include('frontend.urls')),
+    re_path(r".*", index)
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_title = "High5 Admin"
